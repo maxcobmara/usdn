@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  shortname: MyString
+  name: MyString
+  description: MyString
+  domain_type_id: 1
+  sub_domain_type_id: 1
+
+two:
+  shortname: MyString
+  name: MyString
+  description: MyString
+  domain_type_id: 1
+  sub_domain_type_id: 1

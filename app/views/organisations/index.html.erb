@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Organisations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Shortname</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Domain type</th>
+      <th>Sub domain type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @organisations.each do |organisation| %>
+      <tr>
+        <td><%= organisation.shortname %></td>
+        <td><%= organisation.name %></td>
+        <td><%= organisation.description %></td>
+        <td><%= organisation.domain_type_id %></td>
+        <td><%= organisation.sub_domain_type_id %></td>
+        <td><%= link_to 'Show', organisation %></td>
+        <td><%= link_to 'Edit', edit_organisation_path(organisation) %></td>
+        <td><%= link_to 'Destroy', organisation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Organisation', new_organisation_path %>
