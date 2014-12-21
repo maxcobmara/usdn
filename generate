@@ -1,0 +1,68 @@
+Script started on Ahad 21 Dis 2014 02:36:37  MYT
+]0;tldm@tldm-rails-svr: ~/Rails/alanatldm@tldm-rails-svr:~/Rails/alana$ rails generate scaffold Organisation shortname:string name:string description:string domain_type_id:integer sub_domain_type_id:integer
+
+[1m[37m      invoke[0m  active_record
+[1m[32m      create[0m    db/migrate/20141221063704_create_organisations.rb
+[1m[32m      create[0m    app/models/organisation.rb
+[1m[37m      invoke[0m    test_unit
+[1m[32m      create[0m      test/models/organisation_test.rb
+[1m[32m      create[0m      test/fixtures/organisations.yml
+[1m[37m      invoke[0m  resource_route
+[1m[32m       route[0m    resources :organisations
+[1m[37m      invoke[0m  responders_controller
+[1m[32m      create[0m    app/controllers/organisations_controller.rb
+[1m[37m      invoke[0m    erb
+[1m[32m      create[0m      app/views/organisations
+[1m[32m      create[0m      app/views/organisations/index.html.erb
+[1m[32m      create[0m      app/views/organisations/edit.html.erb
+[1m[32m      create[0m      app/views/organisations/show.html.erb
+[1m[32m      create[0m      app/views/organisations/new.html.erb
+[1m[32m      create[0m      app/views/organisations/_form.html.erb
+[1m[37m      invoke[0m    test_unit
+[1m[32m      create[0m      test/controllers/organisations_controller_test.rb
+[1m[37m      invoke[0m    helper
+[1m[32m      create[0m      app/helpers/organisations_helper.rb
+[1m[37m      invoke[0m      test_unit
+[1m[37m      invoke[0m    jbuilder
+[1m[32m      create[0m      app/views/organisations/index.json.jbuilder
+[1m[32m      create[0m      app/views/organisations/show.json.jbuilder
+[1m[37m      invoke[0m  assets
+[1m[37m      invoke[0m    coffee
+[1m[32m      create[0m      app/assets/javascripts/organisations.js.coffee
+[1m[37m      invoke[0m    scss
+[1m[32m      create[0m      app/assets/stylesheets/organisations.css.scss
+[1m[37m      invoke[0m  scss
+[1m[32m      create[0m    app/assets/stylesheets/scaffolds.css.scss
+]0;tldm@tldm-rails-svr: ~/Rails/alanatldm@tldm-rails-svr:~/Rails/alana$ 
+]0;tldm@tldm-rails-svr: ~/Rails/alanatldm@tldm-rails-svr:~/Rails/alana$ rake db:migrate
+== 20141221063704 CreateOrganisations: migrating ==============================
+-- create_table(:organisations)
+   -> 0.0101s
+== 20141221063704 CreateOrganisations: migrated (0.0102s) =====================
+
+]0;tldm@tldm-rails-svr: ~/Rails/alanatldm@tldm-rails-svr:~/Rails/alana$ git add --all
+]0;tldm@tldm-rails-svr: ~/Rails/alanatldm@tldm-rails-svr:~/Rails/alana$ git commit add [K[K[K[K-m "add organisation"
+[master 04e2016] add organisation
+ 21 files changed, 342 insertions(+), 1 deletion(-)
+ create mode 100644 app/assets/javascripts/organisations.js.coffee
+ create mode 100644 app/assets/stylesheets/organisations.css.scss
+ create mode 100644 app/assets/stylesheets/scaffolds.css.scss
+ create mode 100644 app/controllers/organisations_controller.rb
+ create mode 100644 app/helpers/organisations_helper.rb
+ create mode 100644 app/models/organisation.rb
+ create mode 100644 app/views/organisations/_form.html.erb
+ create mode 100644 app/views/organisations/edit.html.erb
+ create mode 100644 app/views/organisations/index.html.erb
+ create mode 100644 app/views/organisations/index.json.jbuilder
+ create mode 100644 app/views/organisations/new.html.erb
+ create mode 100644 app/views/organisations/show.html.erb
+ create mode 100644 app/views/organisations/show.json.jbuilder
+ create mode 100644 db/migrate/20141221063704_create_organisations.rb
+ create mode 100644 generate
+ create mode 100644 test/controllers/organisations_controller_test.rb
+ create mode 100644 test/fixtures/organisations.yml
+ create mode 100644 test/models/organisation_test.rb
+]0;tldm@tldm-rails-svr: ~/Rails/alanatldm@tldm-rails-svr:~/Rails/alana$ git push origin master
+Counting objects: 56, done.
+Delta compression using up to 4 threads.
+Compressing objects:   2% (1/35)   Compressing objects:   5% (2/35)   
