@@ -1,6 +1,23 @@
-.center.jumbotron
-  %h1 Welcome to USDN
-  %h2
-    USDN Network Management
-  = link_to "Sign up now!", '#', class: "btn btn-lg btn-primary"
-= link_to image_tag("rails.png", alt: "Rails logo"), 'http://rubyonrails.org/'
+%div{:role => "tabpanel"}
+  / Nav tabs
+  %ul.nav.nav-tabs{:role => "tablist"}
+    %li.active{:role => "presentation"}
+      %a{"aria-controls" => "home", "data-toggle" => "tab", :href => "#home", :role => "tab"} Home
+    %li{:role => "presentation"}
+      %a{"aria-controls" => "profile", "data-toggle" => "tab", :href => "#profile", :role => "tab"} Networks
+    %li{:role => "presentation"}
+      %a{"aria-controls" => "messages", "data-toggle" => "tab", :href => "#messages", :role => "tab"} Switches
+    %li{:role => "presentation"}
+      %a{"aria-controls" => "settings", "data-toggle" => "tab", :href => "#settings", :role => "tab"} Network Map
+    %li{:role => "presentation"}
+      %a{"aria-controls" => "settings", "data-toggle" => "tab", :href => "#settings", :role => "tab"} IP Addresses
+    %li{:role => "presentation"}
+      %a{"aria-controls" => "settings", "data-toggle" => "tab", :href => "#settings", :role => "tab"} Mac Addresses (NMap)
+    %li{:role => "presentation"}
+      %a{"aria-controls" => "settings", "data-toggle" => "tab", :href => "#settings", :role => "tab"} SNMP Logs
+  / Tab panes
+  .tab-content
+    #home.tab-pane.active{:role => "tabpanel"} ...
+    #profile.tab-pane{:role => "tabpanel"} ...
+    #messages.tab-pane{:role => "tabpanel"} ...
+    #settings.tab-pane{:role => "tabpanel"} ...s
