@@ -82,4 +82,78 @@ Writing objects:   9% (1/11)   Writing objects:  18% (2/11)   Writing objects:
 Total 11 (delta 8), reused 0 (delta 0)
 To git@github.com:maxcobmara/usdn.git
    04e2016..9af0c42  master -> master
-]0;tldm@tldm-ra
+]0;tldm@tldm-rails-svr: ~/Rails/alanatldm@tldm-rails-svr:~/Rails/alana$ /home/tldm/Rails/alana/app/assets/stylesheets/scaffolds.css.scss[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kgit push origin mastercommit -m "update signup screen"add --all[K
+]0;tldm@tldm-rails-svr: ~/Rails/alanatldm@tldm-rails-svr:~/Rails/alana$ git add --allpush origin mastercommit -m "update signup screen"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"r"e"m"o"v"e" "s"c"a"f"f"o"l"d"
+[master b0b37c4] remove scaffold
+ 2 files changed, 18 insertions(+), 70 deletions(-)
+ delete mode 100644 app/assets/stylesheets/scaffolds.css.scss
+]0;tldm@tldm-rails-svr: ~/Rails/alanatldm@tldm-rails-svr:~/Rails/alana$ git commit -m "remove scaffold"[18Padd --allpush origin master
+Counting objects: 11, done.
+Delta compression using up to 4 threads.
+Compressing objects:  16% (1/6)   Compressing objects:  33% (2/6)   Compressing objects:  50% (3/6)   Compressing objects:  66% (4/6)   Compressing objects:  83% (5/6)   Compressing objects: 100% (6/6)   Compressing objects: 100% (6/6), done.
+Writing objects:  16% (1/6)   Writing objects:  33% (2/6)   Writing objects:  50% (3/6)   Writing objects:  66% (4/6)   Writing objects:  83% (5/6)   Writing objects: 100% (6/6)   Writing objects: 100% (6/6), 1.93 KiB | 0 bytes/s, done.
+Total 6 (delta 4), reused 0 (delta 0)
+To git@github.com:maxcobmara/usdn.git
+   9af0c42..b0b37c4  master -> master
+]0;tldm@tldm-rails-svr: ~/Rails/alanatldm@tldm-rails-svr:~/Rails/alana$ rake -T
+rake about                              # List versions of all Rails frameworks and the environment
+rake assets:clean[keep]                 # Remove old compiled assets
+rake assets:clobber                     # Remove compiled assets
+rake assets:environment                 # Load asset compile environment
+rake assets:precompile                  # Compile all the assets named in config.assets.precompile
+rake cache_digests:dependencies         # Lookup first-level dependencies for TEMPLATE (like messages/show or comments/_comment.html)
+rake cache_digests:nested_dependencies  # Lookup nested dependencies for TEMPLATE (like messages/show or comments/_comment.html)
+rake db:create                          # Creates the database from DATABASE_URL or config/database.yml for the current RAILS_ENV (use db:create:all to create all data...
+rake db:drop                            # Drops the database from DATABASE_URL or config/database.yml for the current RAILS_ENV (use db:drop:all to drop all databases ...
+rake db:fixtures:load                   # Load fixtures into the current environment's database
+rake db:migrate                         # Migrate the database (options: VERSION=x, VERBOSE=false, SCOPE=blog)
+rake db:migrate:status                  # Display status of migrations
+rake db:rollback                        # Rolls the schema back to the previous version (specify steps w/ STEP=n)
+rake db:schema:cache:clear              # Clear a db/schema_cache.dump file
+rake db:schema:cache:dump               # Create a db/schema_cache.dump file
+rake db:schema:dump                     # Create a db/schema.rb file that is portable against any DB supported by AR
+rake db:schema:load                     # Load a schema.rb file into the database
+rake db:seed                            # Load the seed data from db/seeds.rb
+rake db:setup                           # Create the database, load the schema, and initialize with the seed data (use db:reset to also drop the database first)
+rake db:structure:dump                  # Dump the database structure to db/structure.sql
+rake db:structure:load                  # Recreate the databases from the structure.sql file
+rake db:version                         # Retrieves the current schema version number
+rake doc:app                            # Generate docs for the app -- also available doc:rails, doc:guides (options: TEMPLATE=/rdoc-template.rb, TITLE="Custom Title")
+rake log:clear                          # Truncates all *.log files in log/ to zero bytes (specify which logs with LOGS=test,development)
+rake middleware                         # Prints out your Rack middleware stack
+rake notes                              # Enumerate all annotations (use notes:optimize, :fixme, :todo for focus)
+rake notes:custom                       # Enumerate a custom annotation, specify with ANNOTATION=CUSTOM
+rake rails:template                     # Applies the template supplied by LOCATION=(/path/to/template) or URL
+rake rails:update                       # Update configs and some other initially generated files (or use just update:configs or update:bin)
+rake routes                             # Print out all defined routes in match order, with names
+rake secret                             # Generate a cryptographically secure secret key (this is typically used to generate a secret for cookie sessions)
+rake stats                              # Report code statistics (KLOCs, etc) from the application or engine
+rake test                               # Runs test:units, test:functionals, test:generators, test:integration, test:jobs together
+rake test:all                           # Run tests quickly by merging all types and not resetting db
+rake test:all:db                        # Run tests quickly, but also reset db
+rake time:zones:all                     # Displays all time zones, also available: time:zones:us, time:zones:local -- filter with OFFSET parameter, e.g., OFFSET=-6
+rake tmp:clear                          # Clear session, cache, and socket files from tmp/ (narrow w/ tmp:sessions:clear, tmp:cache:clear, tmp:sockets:clear)
+rake tmp:create                         # Creates tmp directories for sessions, cache, sockets, and pids
+]0;tldm@tldm-rails-svr: ~/Rails/alanatldm@tldm-rails-svr:~/Rails/alana$ rake routes
+                  Prefix Verb   URI Pattern                       Controller#Action
+           organisations GET    /organisations(.:format)          organisations#index
+                         POST   /organisations(.:format)          organisations#create
+        new_organisation GET    /organisations/new(.:format)      organisations#new
+       edit_organisation GET    /organisations/:id/edit(.:format) organisations#edit
+            organisation GET    /organisations/:id(.:format)      organisations#show
+                         PATCH  /organisations/:id(.:format)      organisations#update
+                         PUT    /organisations/:id(.:format)      organisations#update
+                         DELETE /organisations/:id(.:format)      organisations#destroy
+        new_user_session GET    /users/sign_in(.:format)          devise/sessions#new
+            user_session POST   /users/sign_in(.:format)          devise/sessions#create
+    destroy_user_session DELETE /users/sign_out(.:format)         devise/sessions#destroy
+           user_password POST   /users/password(.:format)         devise/passwords#create
+       new_user_password GET    /users/password/new(.:format)     devise/passwords#new
+      edit_user_password GET    /users/password/edit(.:format)    devise/passwords#edit
+                         PATCH  /users/password(.:format)         devise/passwords#update
+                         PUT    /users/password(.:format)         devise/passwords#update
+cancel_user_registration GET    /users/cancel(.:format)           devise/registrations#cancel
+       user_registration POST   /users(.:format)                  devise/registrations#create
+   new_user_registration GET    /users/sign_up(.:format)          devise/registrations#new
+  edit_user_registration GET    /users/edit(.:format)             devise/registrations#edit
+                         PA

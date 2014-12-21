@@ -55,6 +55,8 @@
             %li
               %a{:href => edit_user_path(current_user)}= fa_icon "user", text: "User"
             %li
+              %a{:href => edit_user_registration_path(current_user)}= fa_icon "key", text: "Change Password"
+            %li
               %a{:href => "#"}= fa_icon "users", text: "Organisation"
             - if user_signed_in?
               %li.divider
