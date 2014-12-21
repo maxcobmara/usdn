@@ -1,6 +1,17 @@
 Rails.application.routes.draw do
-  get 'static_pages/home'
+  devise_for :users
 
+  devise_scope :user do
+   authenticated :user do
+     root to:  'static_pages#home'
+   end
+   unauthenticated :user do
+     root :to => 'devise/sessions#new', as: :unauthenticated_root
+   end
+  end
+
+
+  get 'static_pages/main'
   get 'static_pages/help'
 
   # The priority is based upon order of creation: first created -> highest priority.

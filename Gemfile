@@ -1,6 +1,11 @@
 source 'https://rubygems.org'
 
 gem 'rails',                '4.2.0.beta2'
+gem 'devise',               '~> 3.4.1'
+gem 'thin',                 '~> 1.6.3'
+
+#display gems
+gem 'bootstrap-sass',       '3.2.0.0'
 gem 'sass-rails',           '5.0.0.beta1'
 gem 'uglifier',             '2.5.3'
 gem 'coffee-rails',         '4.0.1'
@@ -11,6 +16,7 @@ gem 'rails-html-sanitizer', '1.0.1'
 gem 'sdoc',                 '0.4.0', group: :doc
 gem 'quiet_assets',         '~> 1.0.3'
 gem 'haml',                 '~> 4.0.5'
+
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
