@@ -156,4 +156,48 @@ cancel_user_registration GET    /users/cancel(.:format)           devise/registr
        user_registration POST   /users(.:format)                  devise/registrations#create
    new_user_registration GET    /users/sign_up(.:format)          devise/registrations#new
   edit_user_registration GET    /users/edit(.:format)             devise/registrations#edit
-                         PA
+                         PATCH  /users(.:format)                  devise/registrations#update
+                         PUT    /users(.:format)                  devise/registrations#update
+                         DELETE /users(.:format)                  devise/registrations#destroy
+                   users GET    /users(.:format)                  users#index
+                         POST   /users(.:format)                  users#create
+                new_user GET    /users/new(.:format)              users#new
+               edit_user GET    /users/:id/edit(.:format)         users#edit
+                    user GET    /users/:id(.:format)              users#show
+                         PATCH  /users/:id(.:format)              users#update
+                         PUT    /users/:id(.:format)              users#update
+                         DELETE /users/:id(.:format)              users#destroy
+                    root GET    /                                 static_pages#home
+    unauthenticated_root GET    /                                 devise/sessions#new
+       static_pages_main GET    /static_pages/main(.:format)      static_pages#main
+       static_pages_help GET    /static_pages/help(.:format)      static_pages#help
+]0;tldm@tldm-rails-svr: ~/Rails/alanatldm@tldm-rails-svr:~/Rails/alana$ ^C
+]0;tldm@tldm-rails-svr: ~/Rails/alanatldm@tldm-rails-svr:~/Rails/alana$ git add --all
+]0;tldm@tldm-rails-svr: ~/Rails/alanatldm@tldm-rails-svr:~/Rails/alana$ git commit -m " [Kupdate change password screen"
+[master b3f2e5d] update change password screen
+ 3 files changed, 80 insertions(+), 2 deletions(-)
+]0;tldm@tldm-rails-svr: ~/Rails/alanatldm@tldm-rails-svr:~/Rails/alana$ git push origin master
+Counting objects: 19, done.
+Delta compression using up to 4 threads.
+Compressing objects:  10% (1/10)   Compressing objects:  20% (2/10)   Compressing objects:  30% (3/10)   Compressing objects:  40% (4/10)   Compressing objects:  50% (5/10)   Compressing objects:  60% (6/10)   Compressing objects:  70% (7/10)   Compressing objects:  80% (8/10)   Compressing objects:  90% (9/10)   Compressing objects: 100% (10/10)   Compressing objects: 100% (10/10), done.
+Writing objects:  10% (1/10)   Writing objects:  20% (2/10)   Writing objects:  30% (3/10)   Writing objects:  40% (4/10)   Writing objects:  50% (5/10)   Writing objects:  60% (6/10)   Writing objects:  70% (7/10)   Writing objects:  80% (8/10)   Writing objects:  90% (9/10)   Writing objects: 100% (10/10)   Writing objects: 100% (10/10), 4.40 KiB | 0 bytes/s, done.
+Total 10 (delta 6), reused 0 (delta 0)
+To git@github.com:maxcobmara/usdn.git
+   b0b37c4..b3f2e5d  master -> master
+]0;tldm@tldm-rails-svr: ~/Rails/alanatldm@tldm-rails-svr:~/Rails/alana$ git add--[K[K --all
+]0;tldm@tldm-rails-svr: ~/Rails/alanatldm@tldm-rails-svr:~/Rails/alana$ git commit -m "update"
+[master 6d98083] update
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+]0;tldm@tldm-rails-svr: ~/Rails/alanatldm@tldm-rails-svr:~/Rails/alana$ git push origin master
+Counting objects: 13, done.
+Delta compression using up to 4 threads.
+Compressing objects:  14% (1/7)   Compressing objects:  28% (2/7)   Compressing objects:  42% (3/7)   Compressing objects:  57% (4/7)   Compressing objects:  71% (5/7)   Compressing objects:  85% (6/7)   Compressing objects: 100% (7/7)   Compressing objects: 100% (7/7), done.
+Writing objects:  14% (1/7)   Writing objects:  28% (2/7)   Writing objects:  42% (3/7)   Writing objects:  57% (4/7)   Writing objects:  71% (5/7)   Writing objects:  85% (6/7)   Writing objects: 100% (7/7)   Writing objects: 100% (7/7), 558 bytes | 0 bytes/s, done.
+Total 7 (delta 5), reused 0 (delta 0)
+To git@github.com:maxcobmara/usdn.git
+   b3f2e5d..6d98083  master -> master
+]0;tldm@tldm-rails-svr: ~/Rails/alanatldm@tldm-rails-svr:~/Rails/alana$ ^C
+]0;tldm@tldm-rails-svr: ~/Rails/alanatldm@tldm-rails-svr:~/Rails/alana$ ec[Kxit
+exit
+
+Script done on Isnin 22 Dis 2014 10:43:52  MYT

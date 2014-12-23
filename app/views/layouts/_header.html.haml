@@ -7,7 +7,7 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      %a.navbar-brand{:href => root_url} ICT:U-SDN
+      %a.navbar-brand{:href => root_url} ICT:Alana
     / Collect the nav links, forms, and other content for toggling
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
       %ul.nav.navbar-nav
@@ -53,9 +53,7 @@
             %span.caret
           %ul.dropdown-menu{:role => "menu"}
             %li
-              %a{:href => edit_user_path(current_user)}= fa_icon "user", text: "User"
-            %li
-              %a{:href => edit_user_registration_path(current_user)}= fa_icon "key", text: "Change Password"
+              %a{:href => edit_user_registration_path(current_user)}= fa_icon "user", text: "User"
             %li
               %a{:href => "#"}= fa_icon "users", text: "Organisation"
             - if user_signed_in?
