@@ -4,6 +4,9 @@ gem 'rails',                '4.2.0.beta2'
 gem 'devise',               '~> 3.4.1'
 gem 'thin',                 '~> 1.6.3'
 
+#sdn gems
+gem 'ruby-nmap',            '~> 0.7.0'
+
 #display gems
 gem 'bootstrap-sass',       '3.2.0.0'
 gem 'sass-rails',           '5.0.0.beta1'

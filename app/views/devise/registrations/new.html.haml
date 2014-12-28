@@ -1,0 +1,41 @@
+%h2
+  Sign up Here
+.row
+  = form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: 'form-horizontal'}) do |f|
+    = devise_error_messages!
+    .col-md-offset-2
+      .form-group
+        .col-sm-2.control-label
+          = f.label :email, for: :email
+        .col-md-3
+          = f.email_field :email, autofocus: true, class: 'form-control mandatory',  readonly: true
+
+      = f.fields_for :organisation_attributes do |org_form|
+        .form-group
+          .col-sm-2.control-label
+            = org_form.label "Organisation", for: :password
+          .col-md-3
+            = org_form.text_field :name, class: 'form-control'
+
+
+      .form-group
+        .col-sm-2.control-label
+          = f.label :password, for: :password
+        .col-md-3
+          = f.password_field :password, autocomplete: "off", class: 'form-control'
+          - if @validatable
+            .help-block.small #{@minimum_password_length} characters minimum
+
+      .form-group
+        .col-sm-2.control-label
+          = f.label :password_confirmation, for: :password_confirmation
+        .col-md-3
+          = f.password_field :password_confirmation, autocomplete: "off", class: 'form-control'
+
+
+      .form-group
+        .col-sm-offset-2.col-md-2.actions
+          = f.submit 'Sign Up', class: "btn btn-primary"
+      .form-group
+        .col-sm-offset-2.col-md-2.actions
+          = render "devise/shared/links"
