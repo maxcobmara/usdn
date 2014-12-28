@@ -10,7 +10,7 @@
   </div>
 
   <div class="field">
-    <%= fields_for :organisation do |org_form| %>
+    <%= f.fields_for :organisation_attributes do |org_form| %>
     <%= org_form.label :name %><br />
     <%= org_form.text_field :name  %>
     <%#= render partial: "devise/shared/field_error", locals: { model: resource.organisation, field: :name } %>
