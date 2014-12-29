@@ -1,2 +1,4 @@
--if current_user.organisation_id.nil?
-  You don't have your organisation setup, click <a>here</a> to set it up now.
+-if current_user.organisation.shortname.nil?
+  You don't have your organisation setup, click
+  = link_to "here", edit_organisation_path(current_user.organisation)
+  to set it up now.
