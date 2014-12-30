@@ -1,0 +1,46 @@
+.row
+  = form_for(@organisation), html: {class: 'form-horizontal'} do |f|
+    - if @organisation.errors.any?
+      .error_explanation
+        %h2
+          = pluralize(@organisation.errors.count, "error")
+          prohibited this organisation from being saved:
+      %ul
+        - @organisation.errors.full_messages.each do |message|
+          %li= message
+
+    .col-md-offset-2
+      .form-group
+        .col-sm-2.control-label
+          = f.label :name, for: :name
+        .col-md-3
+          = f.text_field :name, class: 'form-control mandatory',  readonly: true
+
+    .col-md-offset-2
+      .form-group
+        .col-sm-2.control-label
+          = f.label :shortname, for: :shortname
+        .col-md-3
+          = f.text_field :shortname, class: 'form-control mandatory'
+
+    .col-md-offset-2
+      .form-group
+        .col-sm-2.control-label
+          = f.label :description, for: :description
+        .col-md-3
+          = f.text_area :description, class: 'form-control mandatory', rows: "3"
+
+= f.select :bloodtype, DropDown::MARITAL_STATUS, {prompt: "Select"}, {class: 'selectpicker', "data-width"=>"auto"}
+
+  <div class="field">
+    <%= f.label :domain_type_id %><br>
+    <%= f.number_field :domain_type_id %>
+  </div>
+  <div class="field">
+    <%= f.label :sub_domain_type_id %><br>
+    <%= f.number_field :sub_domain_type_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
