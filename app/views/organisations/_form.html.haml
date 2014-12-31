@@ -1,5 +1,5 @@
 .row
-  = form_for(@organisation), html: {class: 'form-horizontal'} do |f|
+  = form_for(@organisation, html: {class: 'form-horizontal'}) do |f|
     - if @organisation.errors.any?
       .error_explanation
         %h2
@@ -16,31 +16,25 @@
         .col-md-3
           = f.text_field :name, class: 'form-control mandatory',  readonly: true
 
-    .col-md-offset-2
       .form-group
         .col-sm-2.control-label
           = f.label :shortname, for: :shortname
         .col-md-3
           = f.text_field :shortname, class: 'form-control mandatory'
 
-    .col-md-offset-2
       .form-group
         .col-sm-2.control-label
           = f.label :description, for: :description
         .col-md-3
           = f.text_area :description, class: 'form-control mandatory', rows: "3"
 
-= f.select :bloodtype, DropDown::MARITAL_STATUS, {prompt: "Select"}, {class: 'selectpicker', "data-width"=>"auto"}
+      .form-group{style: "z-index:0;"}
+        .col-sm-2.control-label
+          = f.label :domain_type_id, for: :domain_type_id
+        .col-md-4
+          = f.select :domain_type_id, DropDown::SITE_TYPE, {prompt: "Select"}, {class: 'selectpicker'}
 
-  <div class="field">
-    <%= f.label :domain_type_id %><br>
-    <%= f.number_field :domain_type_id %>
-  </div>
-  <div class="field">
-    <%= f.label :sub_domain_type_id %><br>
-    <%= f.number_field :sub_domain_type_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+      .form-group
+        .col-sm-offset-2.col-md-2.actions
+          = f.submit 'Update', class: "btn btn-primary"
+          = link_to 'Back', root_path, style: "margin-left:20px;"

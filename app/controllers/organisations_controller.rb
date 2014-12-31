@@ -28,7 +28,7 @@ class OrganisationsController < ApplicationController
 
   def update
     @organisation.update(organisation_params)
-    respond_with(@organisation)
+    redirect_to(root_url)
   end
 
   def destroy

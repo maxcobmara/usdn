@@ -20,11 +20,7 @@
         %li
           %a{:href => "#"}
         %li
-          %a{:href => "#"} Campus
-        %li
-          %a{:href => "#"} S.P.
-        %li
-          %a{:href => "#"} D.C.
+          %a= DropDown::SITE_TYPE.to_h.key(current_user.organisation.domain_type_id)
         %li.dropdown
           %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
             Dropdown
@@ -55,7 +51,7 @@
             %li
               %a{:href => edit_user_registration_path(current_user)}= fa_icon "user", text: "User"
             %li
-              %a{:href => "#"}= fa_icon "users", text: "Organisation"
+              %a{:href => edit_organisation_path(current_user.organisation)}= fa_icon "users", text: "Organisation"
             - if user_signed_in?
               %li.divider
               %li

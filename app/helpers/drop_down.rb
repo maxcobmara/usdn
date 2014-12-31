@@ -1,6 +1,6 @@
 module DropDown
 
-  SITE_CONFIG = [
+  SITE_TYPE = [
     #  Displayed       stored in db
     [ "Campus",             1 ],
     [ "Service Provider",   2 ],
