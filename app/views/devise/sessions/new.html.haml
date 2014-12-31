@@ -6,9 +6,10 @@
     .jumbotron{style: "background-color:#f6772f;"}
       .row
         .col-md-2.logo
+          = image_tag("logo.png", alt: "Our Logo", height: "333px")
         .col-md-5.overlay
           %h1 Alana
-          %h2 Network Management Web Console
+          %h2{style: "margin-left:0;"} Network Management Web Console
           //= link_to "Sign up now!", new_user_registration_path, class: "btn btn-primary"
         .col-md-4.logon_space
           %h2 Log in
