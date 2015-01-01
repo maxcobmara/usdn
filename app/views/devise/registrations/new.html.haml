@@ -8,7 +8,7 @@
         .col-sm-2.control-label
           = f.label :email, for: :email
         .col-md-3
-          = f.email_field :email, autofocus: true, class: 'form-control mandatory',  readonly: true
+          = f.email_field :email, autofocus: true, class: 'form-control mandatory'
 
       = f.fields_for :organisation_attributes do |org_form|
         .form-group
