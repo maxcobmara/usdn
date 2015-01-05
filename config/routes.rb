@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
   resources :organisations
 
+  resources :sdns do
+    member do
+      post  :nmap_scan
+      get   :nmap_scan
+    end
+  end
+
   devise_for :users, controllers: { registrations: "registrations" }
   resources :users
 

@@ -1,0 +1,27 @@
+- require 'json'
+- f = File.open('log/scan.xml')
+- doc = Nokogiri::XML(f)
+- active_hosts = doc.xpath('nmaprun/host')
+.col-md-offset-1
+  %table.softnet
+    %tr
+      %th Host IP
+      %th IP Type
+      %th
+
+    - active_hosts.each do |host|
+      - if (JSON.parse (host.xpath('status').to_json))[0][0][1] == 'up'
+        %tr
+          %td= (JSON.parse host.xpath('address').to_json)[0][0][1]
+          %td= (JSON.parse host.xpath('address').to_json)[0][1][1]
+          %td= (JSON.parse host.xpath('address').to_json)
+
+
+%hr
+- require 'nmap/xml'
+- Nmap::XML.new('log/scan.xml') do |xml|
+  - xml.each_host do |host|
+    %h4 "[#{host.ip}]"
+    %p{style: "color:red;"}= host.inspect
+    - host.each_port do |port|
+      %p #{port.number}/#{port.protocol}\t#{port.state}\t#{port.service}
