@@ -53,4 +53,55 @@ Script started on Jumaat 09 Jan 2015 10:24:00  MYT
            organisations GET    /organisations(.:format)          organisations#index
                          POST   /organisations(.:format)          organisations#create
         new_organisation GET    /organisations/new(.:format)      organisations#new
-       edit_organisation GET    /organisations/:id/edit(.:format) organisatio
+       edit_organisation GET    /organisations/:id/edit(.:format) organisations#edit
+            organisation GET    /organisations/:id(.:format)      organisations#show
+                         PATCH  /organisations/:id(.:format)      organisations#update
+                         PUT    /organisations/:id(.:format)      organisations#update
+                         DELETE /organisations/:id(.:format)      organisations#destroy
+           nmap_scan_sdn POST   /sdns/:id/nmap_scan(.:format)     sdns#nmap_scan
+                         GET    /sdns/:id/nmap_scan(.:format)     sdns#nmap_scan
+                    sdns GET    /sdns(.:format)                   sdns#index
+                         POST   /sdns(.:format)                   sdns#create
+                 new_sdn GET    /sdns/new(.:format)               sdns#new
+                edit_sdn GET    /sdns/:id/edit(.:format)          sdns#edit
+                     sdn GET    /sdns/:id(.:format)               sdns#show
+                         PATCH  /sdns/:id(.:format)               sdns#update
+                         PUT    /sdns/:id(.:format)               sdns#update
+                         DELETE /sdns/:id(.:format)               sdns#destroy
+        new_user_session GET    /users/sign_in(.:format)          devise/sessions#new
+            user_session POST   /users/sign_in(.:format)          devise/sessions#create
+    destroy_user_session DELETE /users/sign_out(.:format)         devise/sessions#destroy
+           user_password POST   /users/password(.:format)         devise/passwords#create
+       new_user_password GET    /users/password/new(.:format)     devise/passwords#new
+      edit_user_password GET    /users/password/edit(.:format)    devise/passwords#edit
+                         PATCH  /users/password(.:format)         devise/passwords#update
+                         PUT    /users/password(.:format)         devise/passwords#update
+cancel_user_registration GET    /users/cancel(.:format)           registrations#cancel
+       user_registration POST   /users(.:format)                  registrations#create
+   new_user_registration GET    /users/sign_up(.:format)          registrations#new
+  edit_user_registration GET    /users/edit(.:format)             registrations#edit
+                         PATCH  /users(.:format)                  registrations#update
+                         PUT    /users(.:format)                  registrations#update
+                         DELETE /users(.:format)                  registrations#destroy
+                   users GET    /users(.:format)                  users#index
+                         POST   /users(.:format)                  users#create
+                new_user GET    /users/new(.:format)              users#new
+               edit_user GET    /users/:id/edit(.:format)         users#edit
+                    user GET    /users/:id(.:format)              users#show
+                         PATCH  /users/:id(.:format)              users#update
+                         PUT    /users/:id(.:format)              users#update
+                         DELETE /users/:id(.:format)              users#destroy
+                    root GET    /                                 static_pages#home
+    unauthenticated_root GET    /                                 devise/sessions#new
+       static_pages_main GET    /static_pages/main(.:format)      static_pages#main
+       static_pages_help GET    /static_pages/help(.:format)      static_pages#help
+]0;tldm@tldm-rails-svr: ~/Rails/alanatldm@tldm-rails-svr:~/Rails/alana$ git ad --[K[K[Kd --all
+]0;tldm@tldm-rails-svr: ~/Rails/alanatldm@tldm-rails-svr:~/Rails/alana$ git commit -m " [Kscaffold nwt[K[Ketwroks[K[K[K[Korks"
+[master 9163766] scaffold networks
+ 20 files changed, 378 insertions(+), 206 deletions(-)
+ create mode 100644 app/assets/javascripts/networks.js.coffee
+ create mode 100644 app/assets/stylesheets/scaffolds.css.scss
+ create mode 100644 app/controllers/networks_controller.rb
+ create mode 100644 app/helpers/networks_helper.rb
+ create mode 100644 app/models/network.rb
+ create mode 100644 a
