@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141221063704) do
+ActiveRecord::Schema.define(version: 20150109142439) do
+
+  create_table "networks", force: true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.string   "ip_range"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "organisations", force: true do |t|
     t.string   "shortname"

@@ -1,203 +1,56 @@
-Script started on Ahad 21 Dis 2014 02:36:37  MYT
-]0;tldm@tldm-rails-svr: ~/Rails/alanatldm@tldm-rails-svr:~/Rails/alana$ rails generate scaffold Organisation shortname:string name:string description:string domain_type_id:integer sub_domain_type_id:integer
-
+Script started on Jumaat 09 Jan 2015 10:24:00  MYT
+]0;tldm@tldm-rails-svr: ~/Rails/alanatldm@tldm-rails-svr:~/Rails/alana$ railexitrails s -p 4000exit[Krailexitrails s -p 4000[9Patom .[4Plscd nms-on-railsls[Katom .rails s -p 4000exit[Krails script generate scaffold Networks name:string description:string ip_range:string[1P[1P[1P[1P[1P[1P[1P
+[WARNING] The model name 'Networks' was recognized as a plural, using the singular 'Network' instead. Override with --force-plural or setup custom inflection rules for this noun before running the generator.
 [1m[37m      invoke[0m  active_record
-[1m[32m      create[0m    db/migrate/20141221063704_create_organisations.rb
-[1m[32m      create[0m    app/models/organisation.rb
+[1m[32m      create[0m    db/migrate/20150109142439_create_networks.rb
+[1m[32m      create[0m    app/models/network.rb
 [1m[37m      invoke[0m    test_unit
-[1m[32m      create[0m      test/models/organisation_test.rb
-[1m[32m      create[0m      test/fixtures/organisations.yml
+[1m[32m      create[0m      test/models/network_test.rb
+[1m[32m      create[0m      test/fixtures/networks.yml
 [1m[37m      invoke[0m  resource_route
-[1m[32m       route[0m    resources :organisations
+[1m[32m       route[0m    resources :networks
 [1m[37m      invoke[0m  responders_controller
-[1m[32m      create[0m    app/controllers/organisations_controller.rb
+[1m[32m      create[0m    app/controllers/networks_controller.rb
 [1m[37m      invoke[0m    erb
-[1m[32m      create[0m      app/views/organisations
-[1m[32m      create[0m      app/views/organisations/index.html.erb
-[1m[32m      create[0m      app/views/organisations/edit.html.erb
-[1m[32m      create[0m      app/views/organisations/show.html.erb
-[1m[32m      create[0m      app/views/organisations/new.html.erb
-[1m[32m      create[0m      app/views/organisations/_form.html.erb
+[1m[32m      create[0m      app/views/networks
+[1m[32m      create[0m      app/views/networks/index.html.erb
+[1m[32m      create[0m      app/views/networks/edit.html.erb
+[1m[32m      create[0m      app/views/networks/show.html.erb
+[1m[32m      create[0m      app/views/networks/new.html.erb
+[1m[32m      create[0m      app/views/networks/_form.html.erb
 [1m[37m      invoke[0m    test_unit
-[1m[32m      create[0m      test/controllers/organisations_controller_test.rb
+[1m[32m      create[0m      test/controllers/networks_controller_test.rb
 [1m[37m      invoke[0m    helper
-[1m[32m      create[0m      app/helpers/organisations_helper.rb
+[1m[32m      create[0m      app/helpers/networks_helper.rb
 [1m[37m      invoke[0m      test_unit
 [1m[37m      invoke[0m    jbuilder
-[1m[32m      create[0m      app/views/organisations/index.json.jbuilder
-[1m[32m      create[0m      app/views/organisations/show.json.jbuilder
+[1m[32m      create[0m      app/views/networks/index.json.jbuilder
+[1m[32m      create[0m      app/views/networks/show.json.jbuilder
 [1m[37m      invoke[0m  assets
 [1m[37m      invoke[0m    coffee
-[1m[32m      create[0m      app/assets/javascripts/organisations.js.coffee
+[1m[32m      create[0m      app/assets/javascripts/networks.js.coffee
 [1m[37m      invoke[0m    scss
-[1m[32m      create[0m      app/assets/stylesheets/organisations.css.scss
+[1m[32m      create[0m      app/assets/stylesheets/networks.css.scss
 [1m[37m      invoke[0m  scss
 [1m[32m      create[0m    app/assets/stylesheets/scaffolds.css.scss
-]0;tldm@tldm-rails-svr: ~/Rails/alanatldm@tldm-rails-svr:~/Rails/alana$ 
+]0;tldm@tldm-rails-svr: ~/Rails/alanatldm@tldm-rails-svr:~/Rails/alana$ rm app/assets/stylesheets/networks.css.scss
 ]0;tldm@tldm-rails-svr: ~/Rails/alanatldm@tldm-rails-svr:~/Rails/alana$ rake db:migrate
-== 20141221063704 CreateOrganisations: migrating ==============================
--- create_table(:organisations)
-   -> 0.0101s
-== 20141221063704 CreateOrganisations: migrated (0.0102s) =====================
+== 20150109142439 CreateNetworks: migrating ===================================
+-- create_table(:networks)
+   -> 0.0255s
+== 20150109142439 CreateNetworks: migrated (0.0256s) ==========================
 
-]0;tldm@tldm-rails-svr: ~/Rails/alanatldm@tldm-rails-svr:~/Rails/alana$ git add --all
-]0;tldm@tldm-rails-svr: ~/Rails/alanatldm@tldm-rails-svr:~/Rails/alana$ git commit add [K[K[K[K-m "add organisation"
-[master 04e2016] add organisation
- 21 files changed, 342 insertions(+), 1 deletion(-)
- create mode 100644 app/assets/javascripts/organisations.js.coffee
- create mode 100644 app/assets/stylesheets/organisations.css.scss
- create mode 100644 app/assets/stylesheets/scaffolds.css.scss
- create mode 100644 app/controllers/organisations_controller.rb
- create mode 100644 app/helpers/organisations_helper.rb
- create mode 100644 app/models/organisation.rb
- create mode 100644 app/views/organisations/_form.html.erb
- create mode 100644 app/views/organisations/edit.html.erb
- create mode 100644 app/views/organisations/index.html.erb
- create mode 100644 app/views/organisations/index.json.jbuilder
- create mode 100644 app/views/organisations/new.html.erb
- create mode 100644 app/views/organisations/show.html.erb
- create mode 100644 app/views/organisations/show.json.jbuilder
- create mode 100644 db/migrate/20141221063704_create_organisations.rb
- create mode 100644 generate
- create mode 100644 test/controllers/organisations_controller_test.rb
- create mode 100644 test/fixtures/organisations.yml
- create mode 100644 test/models/organisation_test.rb
-]0;tldm@tldm-rails-svr: ~/Rails/alanatldm@tldm-rails-svr:~/Rails/alana$ git push origin master
-Counting objects: 56, done.
-Delta compression using up to 4 threads.
-Compressing objects:   2% (1/35)   Compressing objects:   5% (2/35)   Compressing objects:   8% (3/35)   Compressing objects:  11% (4/35)   Compressing objects:  14% (5/35)   Compressing objects:  17% (6/35)   Compressing objects:  20% (7/35)   Compressing objects:  22% (8/35)   Compressing objects:  25% (9/35)   Compressing objects:  28% (10/35)   Compressing objects:  31% (11/35)   Compressing objects:  34% (12/35)   Compressing objects:  37% (13/35)   Compressing objects:  40% (14/35)   Compressing objects:  42% (15/35)   Compressing objects:  45% (16/35)   Compressing objects:  48% (17/35)   Compressing objects:  51% (18/35)   Compressing objects:  54% (19/35)   Compressing objects:  57% (20/35)   Compressing objects:  60% (21/35)   Compressing objects:  62% (22/35)   Compressing objects:  65% (23/35)   Compressing objects:  68% (24/35)   Compressing objects:  71% (25/35)   Compressing objects:  74% (26/35)   Compressing objects:  77% (27/35)   Compressing objects:  80% (28/35)   Compressing objects:  82% (29/35)   Compressing objects:  85% (30/35)   Compressing objects:  88% (31/35)   Compressing objects:  91% (32/35)   Compressing objects:  94% (33/35)   Compressing objects:  97% (34/35)   Compressing objects: 100% (35/35)   Compressing objects: 100% (35/35), done.
-Writing objects:   2% (1/37)   Writing objects:   5% (2/37)   Writing objects:   8% (3/37)   Writing objects:  10% (4/37)   Writing objects:  13% (5/37)   Writing objects:  16% (6/37)   Writing objects:  18% (7/37)   Writing objects:  21% (8/37)   Writing objects:  24% (9/37)   Writing objects:  27% (10/37)   Writing objects:  29% (11/37)   Writing objects:  32% (12/37)   Writing objects:  35% (13/37)   Writing objects:  37% (14/37)   Writing objects:  40% (15/37)   Writing objects:  43% (16/37)   Writing objects:  45% (17/37)   Writing objects:  48% (18/37)   Writing objects:  51% (19/37)   Writing objects:  54% (20/37)   Writing objects:  56% (21/37)   Writing objects:  59% (22/37)   Writing objects:  62% (23/37)   Writing objects:  64% (24/37)   Writing objects:  67% (25/37)   Writing objects:  70% (26/37)   Writing objects:  72% (27/37)   Writing objects:  75% (28/37)   Writing objects:  78% (29/37)   Writing objects:  81% (30/37)   Writing objects:  83% (31/37)   Writing objects:  86% (32/37)   Writing objects:  89% (33/37)   Writing objects:  91% (34/37)   Writing objects:  94% (35/37)   Writing objects:  97% (36/37)   Writing objects: 100% (37/37)   Writing objects: 100% (37/37), 5.89 KiB | 0 bytes/s, done.
-Total 37 (delta 6), reused 0 (delta 0)
-To git@github.com:maxcobmara/usdn.git
-   bae3d36..04e2016  master -> master
-]0;tldm@tldm-rails-svr: ~/Rails/alanatldm@tldm-rails-svr:~/Rails/alana$ git add --all
-]0;tldm@tldm-rails-svr: ~/Rails/alanatldm@tldm-rails-svr:~/Rails/alana$ git commit -m "update signup screen"
-[master 9af0c42] update signup screen
- 3 files changed, 72 insertions(+), 2 deletions(-)
-]0;tldm@tldm-rails-svr: ~/Rails/alanatldm@tldm-rails-svr:~/Rails/alana$ git push origin master
-Counting objects: 21, done.
-Delta compression using up to 4 threads.
-Compressing objects:   9% (1/11)   Compressing objects:  18% (2/11)   Compressing objects:  27% (3/11)   Compressing objects:  36% (4/11)   Compressing objects:  45% (5/11)   Compressing objects:  54% (6/11)   Compressing objects:  63% (7/11)   Compressing objects:  72% (8/11)   Compressing objects:  81% (9/11)   Compressing objects:  90% (10/11)   Compressing objects: 100% (11/11)   Compressing objects: 100% (11/11), done.
-Writing objects:   9% (1/11)   Writing objects:  18% (2/11)   Writing objects:  27% (3/11)   Writing objects:  36% (4/11)   Writing objects:  45% (5/11)   Writing objects:  54% (6/11)   Writing objects:  63% (7/11)   Writing objects:  72% (8/11)   Writing objects:  81% (9/11)   Writing objects:  90% (10/11)   Writing objects: 100% (11/11)   Writing objects: 100% (11/11), 1.68 KiB | 0 bytes/s, done.
-Total 11 (delta 8), reused 0 (delta 0)
-To git@github.com:maxcobmara/usdn.git
-   04e2016..9af0c42  master -> master
-]0;tldm@tldm-rails-svr: ~/Rails/alanatldm@tldm-rails-svr:~/Rails/alana$ /home/tldm/Rails/alana/app/assets/stylesheets/scaffolds.css.scss[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kgit push origin mastercommit -m "update signup screen"add --all[K
-]0;tldm@tldm-rails-svr: ~/Rails/alanatldm@tldm-rails-svr:~/Rails/alana$ git add --allpush origin mastercommit -m "update signup screen"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"r"e"m"o"v"e" "s"c"a"f"f"o"l"d"
-[master b0b37c4] remove scaffold
- 2 files changed, 18 insertions(+), 70 deletions(-)
- delete mode 100644 app/assets/stylesheets/scaffolds.css.scss
-]0;tldm@tldm-rails-svr: ~/Rails/alanatldm@tldm-rails-svr:~/Rails/alana$ git commit -m "remove scaffold"[18Padd --allpush origin master
-Counting objects: 11, done.
-Delta compression using up to 4 threads.
-Compressing objects:  16% (1/6)   Compressing objects:  33% (2/6)   Compressing objects:  50% (3/6)   Compressing objects:  66% (4/6)   Compressing objects:  83% (5/6)   Compressing objects: 100% (6/6)   Compressing objects: 100% (6/6), done.
-Writing objects:  16% (1/6)   Writing objects:  33% (2/6)   Writing objects:  50% (3/6)   Writing objects:  66% (4/6)   Writing objects:  83% (5/6)   Writing objects: 100% (6/6)   Writing objects: 100% (6/6), 1.93 KiB | 0 bytes/s, done.
-Total 6 (delta 4), reused 0 (delta 0)
-To git@github.com:maxcobmara/usdn.git
-   9af0c42..b0b37c4  master -> master
-]0;tldm@tldm-rails-svr: ~/Rails/alanatldm@tldm-rails-svr:~/Rails/alana$ rake -T
-rake about                              # List versions of all Rails frameworks and the environment
-rake assets:clean[keep]                 # Remove old compiled assets
-rake assets:clobber                     # Remove compiled assets
-rake assets:environment                 # Load asset compile environment
-rake assets:precompile                  # Compile all the assets named in config.assets.precompile
-rake cache_digests:dependencies         # Lookup first-level dependencies for TEMPLATE (like messages/show or comments/_comment.html)
-rake cache_digests:nested_dependencies  # Lookup nested dependencies for TEMPLATE (like messages/show or comments/_comment.html)
-rake db:create                          # Creates the database from DATABASE_URL or config/database.yml for the current RAILS_ENV (use db:create:all to create all data...
-rake db:drop                            # Drops the database from DATABASE_URL or config/database.yml for the current RAILS_ENV (use db:drop:all to drop all databases ...
-rake db:fixtures:load                   # Load fixtures into the current environment's database
-rake db:migrate                         # Migrate the database (options: VERSION=x, VERBOSE=false, SCOPE=blog)
-rake db:migrate:status                  # Display status of migrations
-rake db:rollback                        # Rolls the schema back to the previous version (specify steps w/ STEP=n)
-rake db:schema:cache:clear              # Clear a db/schema_cache.dump file
-rake db:schema:cache:dump               # Create a db/schema_cache.dump file
-rake db:schema:dump                     # Create a db/schema.rb file that is portable against any DB supported by AR
-rake db:schema:load                     # Load a schema.rb file into the database
-rake db:seed                            # Load the seed data from db/seeds.rb
-rake db:setup                           # Create the database, load the schema, and initialize with the seed data (use db:reset to also drop the database first)
-rake db:structure:dump                  # Dump the database structure to db/structure.sql
-rake db:structure:load                  # Recreate the databases from the structure.sql file
-rake db:version                         # Retrieves the current schema version number
-rake doc:app                            # Generate docs for the app -- also available doc:rails, doc:guides (options: TEMPLATE=/rdoc-template.rb, TITLE="Custom Title")
-rake log:clear                          # Truncates all *.log files in log/ to zero bytes (specify which logs with LOGS=test,development)
-rake middleware                         # Prints out your Rack middleware stack
-rake notes                              # Enumerate all annotations (use notes:optimize, :fixme, :todo for focus)
-rake notes:custom                       # Enumerate a custom annotation, specify with ANNOTATION=CUSTOM
-rake rails:template                     # Applies the template supplied by LOCATION=(/path/to/template) or URL
-rake rails:update                       # Update configs and some other initially generated files (or use just update:configs or update:bin)
-rake routes                             # Print out all defined routes in match order, with names
-rake secret                             # Generate a cryptographically secure secret key (this is typically used to generate a secret for cookie sessions)
-rake stats                              # Report code statistics (KLOCs, etc) from the application or engine
-rake test                               # Runs test:units, test:functionals, test:generators, test:integration, test:jobs together
-rake test:all                           # Run tests quickly by merging all types and not resetting db
-rake test:all:db                        # Run tests quickly, but also reset db
-rake time:zones:all                     # Displays all time zones, also available: time:zones:us, time:zones:local -- filter with OFFSET parameter, e.g., OFFSET=-6
-rake tmp:clear                          # Clear session, cache, and socket files from tmp/ (narrow w/ tmp:sessions:clear, tmp:cache:clear, tmp:sockets:clear)
-rake tmp:create                         # Creates tmp directories for sessions, cache, sockets, and pids
 ]0;tldm@tldm-rails-svr: ~/Rails/alanatldm@tldm-rails-svr:~/Rails/alana$ rake routes
                   Prefix Verb   URI Pattern                       Controller#Action
+                networks GET    /networks(.:format)               networks#index
+                         POST   /networks(.:format)               networks#create
+             new_network GET    /networks/new(.:format)           networks#new
+            edit_network GET    /networks/:id/edit(.:format)      networks#edit
+                 network GET    /networks/:id(.:format)           networks#show
+                         PATCH  /networks/:id(.:format)           networks#update
+                         PUT    /networks/:id(.:format)           networks#update
+                         DELETE /networks/:id(.:format)           networks#destroy
            organisations GET    /organisations(.:format)          organisations#index
                          POST   /organisations(.:format)          organisations#create
         new_organisation GET    /organisations/new(.:format)      organisations#new
-       edit_organisation GET    /organisations/:id/edit(.:format) organisations#edit
-            organisation GET    /organisations/:id(.:format)      organisations#show
-                         PATCH  /organisations/:id(.:format)      organisations#update
-                         PUT    /organisations/:id(.:format)      organisations#update
-                         DELETE /organisations/:id(.:format)      organisations#destroy
-        new_user_session GET    /users/sign_in(.:format)          devise/sessions#new
-            user_session POST   /users/sign_in(.:format)          devise/sessions#create
-    destroy_user_session DELETE /users/sign_out(.:format)         devise/sessions#destroy
-           user_password POST   /users/password(.:format)         devise/passwords#create
-       new_user_password GET    /users/password/new(.:format)     devise/passwords#new
-      edit_user_password GET    /users/password/edit(.:format)    devise/passwords#edit
-                         PATCH  /users/password(.:format)         devise/passwords#update
-                         PUT    /users/password(.:format)         devise/passwords#update
-cancel_user_registration GET    /users/cancel(.:format)           devise/registrations#cancel
-       user_registration POST   /users(.:format)                  devise/registrations#create
-   new_user_registration GET    /users/sign_up(.:format)          devise/registrations#new
-  edit_user_registration GET    /users/edit(.:format)             devise/registrations#edit
-                         PATCH  /users(.:format)                  devise/registrations#update
-                         PUT    /users(.:format)                  devise/registrations#update
-                         DELETE /users(.:format)                  devise/registrations#destroy
-                   users GET    /users(.:format)                  users#index
-                         POST   /users(.:format)                  users#create
-                new_user GET    /users/new(.:format)              users#new
-               edit_user GET    /users/:id/edit(.:format)         users#edit
-                    user GET    /users/:id(.:format)              users#show
-                         PATCH  /users/:id(.:format)              users#update
-                         PUT    /users/:id(.:format)              users#update
-                         DELETE /users/:id(.:format)              users#destroy
-                    root GET    /                                 static_pages#home
-    unauthenticated_root GET    /                                 devise/sessions#new
-       static_pages_main GET    /static_pages/main(.:format)      static_pages#main
-       static_pages_help GET    /static_pages/help(.:format)      static_pages#help
-]0;tldm@tldm-rails-svr: ~/Rails/alanatldm@tldm-rails-svr:~/Rails/alana$ ^C
-]0;tldm@tldm-rails-svr: ~/Rails/alanatldm@tldm-rails-svr:~/Rails/alana$ git add --all
-]0;tldm@tldm-rails-svr: ~/Rails/alanatldm@tldm-rails-svr:~/Rails/alana$ git commit -m " [Kupdate change password screen"
-[master b3f2e5d] update change password screen
- 3 files changed, 80 insertions(+), 2 deletions(-)
-]0;tldm@tldm-rails-svr: ~/Rails/alanatldm@tldm-rails-svr:~/Rails/alana$ git push origin master
-Counting objects: 19, done.
-Delta compression using up to 4 threads.
-Compressing objects:  10% (1/10)   Compressing objects:  20% (2/10)   Compressing objects:  30% (3/10)   Compressing objects:  40% (4/10)   Compressing objects:  50% (5/10)   Compressing objects:  60% (6/10)   Compressing objects:  70% (7/10)   Compressing objects:  80% (8/10)   Compressing objects:  90% (9/10)   Compressing objects: 100% (10/10)   Compressing objects: 100% (10/10), done.
-Writing objects:  10% (1/10)   Writing objects:  20% (2/10)   Writing objects:  30% (3/10)   Writing objects:  40% (4/10)   Writing objects:  50% (5/10)   Writing objects:  60% (6/10)   Writing objects:  70% (7/10)   Writing objects:  80% (8/10)   Writing objects:  90% (9/10)   Writing objects: 100% (10/10)   Writing objects: 100% (10/10), 4.40 KiB | 0 bytes/s, done.
-Total 10 (delta 6), reused 0 (delta 0)
-To git@github.com:maxcobmara/usdn.git
-   b0b37c4..b3f2e5d  master -> master
-]0;tldm@tldm-rails-svr: ~/Rails/alanatldm@tldm-rails-svr:~/Rails/alana$ git add--[K[K --all
-]0;tldm@tldm-rails-svr: ~/Rails/alanatldm@tldm-rails-svr:~/Rails/alana$ git commit -m "update"
-[master 6d98083] update
- 1 file changed, 1 insertion(+), 1 deletion(-)
-]0;tldm@tldm-rails-svr: ~/Rails/alanatldm@tldm-rails-svr:~/Rails/alana$ git push origin master
-Counting objects: 13, done.
-Delta compression using up to 4 threads.
-Compressing objects:  14% (1/7)   Compressing objects:  28% (2/7)   Compressing objects:  42% (3/7)   Compressing objects:  57% (4/7)   Compressing objects:  71% (5/7)   Compressing objects:  85% (6/7)   Compressing objects: 100% (7/7)   Compressing objects: 100% (7/7), done.
-Writing objects:  14% (1/7)   Writing objects:  28% (2/7)   Writing objects:  42% (3/7)   Writing objects:  57% (4/7)   Writing objects:  71% (5/7)   Writing objects:  85% (6/7)   Writing objects: 100% (7/7)   Writing objects: 100% (7/7), 558 bytes | 0 bytes/s, done.
-Total 7 (delta 5), reused 0 (delta 0)
-To git@github.com:maxcobmara/usdn.git
-   b3f2e5d..6d98083  master -> master
-]0;tldm@tldm-rails-svr: ~/Rails/alanatldm@tldm-rails-svr:~/Rails/alana$ ^C
-]0;tldm@tldm-rails-svr: ~/Rails/alanatldm@tldm-rails-svr:~/Rails/alana$ ec[Kxit
-exit
-
-Script done on Isnin 22 Dis 2014 10:43:52  MYT
+       edit_organisation GET    /organisations/:id/edit(.:format) organisatio
