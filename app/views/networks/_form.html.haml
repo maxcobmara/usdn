@@ -1,0 +1,33 @@
+= form_for(@network, html: {class: 'form-horizontal'}) do |f|
+  - if @network.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@network.errors.count, "error")
+        prohibited this network from being saved:
+      %ul
+        - @network.errors.full_messages.each do |message|
+          %li= message
+
+  .form-group
+    .col-sm-2.control-label
+      = f.label :name, for: :name
+    .col-md-3
+      = f.text_field :name, class: 'form-control'
+
+  .form-group
+    .col-sm-2.control-label
+      = f.label :description, for: :description
+    .col-md-3
+      = f.text_area :description, class: 'form-control', rows: 3
+
+  .form-group
+    .col-sm-2.control-label
+      = f.label :ip_range, for: :ip_range
+    .col-md-3
+      = f.text_field :ip_range, class: 'form-control'
+      .help-block.small use ruby-nmap notation e.g 192.168.0.*
+
+  .form-group
+    .col-sm-offset-2.col-md-2.actions
+      = f.submit 'Create', class: "btn btn-primary"
+      = link_to 'Back', networks_path
