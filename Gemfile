@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails',                '4.2.0.beta2'
+gem 'rails',                '4.2.1'
 gem 'devise',               '~> 3.4.1'
 gem 'thin',                 '~> 1.6.3'
 
@@ -8,7 +8,7 @@ gem 'thin',                 '~> 1.6.3'
 gem 'ruby-nmap',            '~> 0.7.0'
 
 #display gems
-gem 'bootstrap-sass',       '3.2.0.0'
+gem 'bootstrap-sass', '~> 3.2', '>= 3.2.0.4'
 gem 'sass-rails',           '5.0.0.beta1'
 gem 'uglifier',             '2.5.3'
 gem 'coffee-rails',         '4.0.1'
