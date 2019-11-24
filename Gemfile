@@ -18,7 +18,7 @@ gem 'jbuilder',             '2.2.3'
 gem 'rails-html-sanitizer', '1.0.1'
 gem 'sdoc',                 '0.4.0', group: :doc
 gem 'quiet_assets',         '~> 1.0.3'
-gem 'haml',                 '~> 4.0.5'
+gem 'haml',                 '~> 5.0.0'
 gem 'font-awesome-rails',   '~> 4.2.0.0'
 
 
