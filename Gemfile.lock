@@ -122,7 +122,7 @@ GEM
       minitest (> 1.2.0)
       rails (>= 2.3.3)
     mini_mime (1.0.2)
-    mini_portile2 (2.4.0)
+    mini_portile2 (2.5.1)
     minitest (5.12.0)
     minitest-reporters (1.0.5)
       ansi
@@ -131,8 +131,9 @@ GEM
       ruby-progressbar
     multi_json (1.14.1)
     nenv (0.1.1)
-    nokogiri (1.9.1)
-      mini_portile2 (~> 2.4.0)
+    nokogiri (1.11.4)
+      mini_portile2 (~> 2.5.0)
+      racc (~> 1.4)
     orm_adapter (0.5.0)
     pg (0.17.1)
     pry (0.10.1)
@@ -141,6 +142,7 @@ GEM
       slop (~> 3.4)
     quiet_assets (1.0.3)
       railties (>= 3.1, < 5.0)
+    racc (1.5.2)
     rack (1.6.11)
     rack-test (0.6.3)
       rack (>= 1.0)
