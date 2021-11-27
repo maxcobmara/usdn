@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails',                '4.2.1'
+gem 'rails',                '4.2.2'
 gem 'devise',               '~> 4.7.1'
 gem 'thin',                 '~> 1.6.3'
 
@@ -15,7 +15,7 @@ gem 'coffee-rails',         '4.0.1'
 gem 'jquery-rails',         '4.0.0.beta2'
 gem 'turbolinks',           '2.3.0'
 gem 'jbuilder',             '2.2.3'
-gem 'rails-html-sanitizer', '1.0.1'
+gem 'rails-html-sanitizer', '1.0.4'
 gem 'sdoc',                 '0.4.0', group: :doc
 gem 'quiet_assets',         '~> 1.0.3'
 gem 'haml',                 '~> 5.0.0'
@@ -25,7 +25,7 @@ gem 'font-awesome-rails',   '~> 4.2.0.0'
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
   gem 'byebug',      '3.4.0'
-  gem 'web-console', '2.0.0.beta3'
+  gem 'web-console', '2.1.3'
   gem 'spring',      '1.1.3'
 end
 
