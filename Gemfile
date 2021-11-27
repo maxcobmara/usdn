@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails',                '4.2.1'
-gem 'devise',               '~> 3.4.1'
+gem 'devise',               '~> 4.7.1'
 gem 'thin',                 '~> 1.6.3'
 
 #sdn gems
